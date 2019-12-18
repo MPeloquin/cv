@@ -10,8 +10,9 @@
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{xcolor}
 
-
+\definecolor{main}{HTML}{002366}
 
 
 \pagestyle{fancy}
@@ -39,8 +40,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-4pt}\scshape\raggedright\large\color{main}
+}{}{0em}{}[\color{main}\titlerule \vspace{-5pt}]
 
 
 %-------------------------
@@ -54,16 +55,16 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{0.96\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       #3 & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-10pt}
 }
 
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 \newcommand{\resumeSubSubHeading}[1]{
-    \vspace{2pt}
+
     \textit{\small #1}
     \vspace{-6pt}
 }
@@ -72,7 +73,7 @@
 \renewcommand{\labelitemii}{$\circ$}
 
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=2em, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -89,8 +90,11 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Maxime P\'eloquin} &  \href{mailto:maxime.peloquin@gmail.com}{maxime.peloquin@gmail.com}\\
-  & 514-358-2342 \\
+  \textbf{\Huge\vspace{-20pt}\color{main} Maxime P\'eloquin} \\
+
+    & \href{mailto:maxime.peloquin@gmail.com}{maxime.peloquin@gmail.com} \\
+    & 514-358-2342 \\
+    
   \vspace{-20pt}
 \end{tabular*}
 
@@ -105,14 +109,13 @@
       \resumeItemListStart
         \resumeItem{}
           {Participate in the development of multiple mobile applications using an in-house framework utilizing the Unity game engine, ReactiveX programming and design patterns.}
-        \resumeItem{}{Evolve and improve the in-house framework in C#}
+        \resumeItem{}{Evolve and improve the in-house framework in C\#.}
         \resumeItem{}{Push for best practices including code reviews, pair programming and automated testing.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Rideau, Inc.}{}
-      {Software developer II}{Sep 2016 - May 2018}
-      
+      {Software developer II}{Sep 2016 - May 2018} 
         \resumeSubSubHeading{As a team lead for an award winning product in the HR industry}
         \resumeItemListStart
             \resumeItem{}
@@ -122,11 +125,10 @@
             \resumeItem{}
               {Plan and guide development related meetings (plannings \& retrospectives) for an Agile team.}
             \resumeItem{}
-              {Communicate with the QA team, Business Analyst team and PO to insure good understanding of requirements.}
+              {Communicate with the QA team, Business Analyst team and PO to insure good understanding of \linebreak requirements.}
             \resumeItem{}
               {Collaborate using code reviews and pair programming.}
         \resumeItemListEnd
-        
         \resumeSubSubHeading{As a team lead for a three-person distributed team working on client facing reports}
         \resumeItemListStart
             \resumeItem{}
@@ -136,7 +138,6 @@
             \resumeItem{}
               {Learn SSRS and produce reports for internal clients.}
         \resumeItemListEnd
-        
         \resumeSubSubHeading{As a member of a development team}
         \resumeItemListStart
             \resumeItem{}
@@ -145,12 +146,12 @@
               {Insure all the pages of the application are responsive and provide a good user experience on mobile browsers.}
         \resumeItemListEnd
         
-      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \begin{tabular*}{0.96\textwidth}{l@{\extracolsep{\fill}}r}
       Software developer & \textit{\small May 2015 - Sep 2016} \\
       \end{tabular*}\vspace{-5pt}
       \resumeItemListStart
         \resumeItem{}
-          {Participate in the development of a ASP.NET MVC application that offers online courses to the clients' managers, as well as a way for the client to track their managers' progress. These courses helped managers increase their employee recognition skills.}
+          {Participate in the development of an ASP.NET MVC web application.}
         \resumeItem{}
           {Introduce automated tests to the application.}
       \resumeItemListEnd
@@ -163,7 +164,7 @@
           {Contribute to the development of a single-page app using AngularJS, coffeescript and a RESTFul Api in C\#, using TDD on all levels.}
         \resumeItem{}{Participate in a truly Agile team lead by scrum.org coaches.}
       \resumeItemListEnd
-      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \begin{tabular*}{0.96\textwidth}{l@{\extracolsep{\fill}}r}
       Software developer & \textit{\small Summer 2012} \\
       \end{tabular*}\vspace{-5pt}
       \resumeItemListStart
@@ -171,8 +172,6 @@
           {Develop multiple in-house applications using VB.NET.}
       \resumeItemListEnd
 
-
-      
     \resumeSubheading
       {Universit\'e de Montr\'eal}{}
       {Intern}{Summer 2011}
@@ -193,8 +192,6 @@
   \resumeSubHeadingListEnd
 
 
-
-
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
@@ -205,18 +202,6 @@
       {Coll\`ege Bois-De-Boulgne}{}
       {Computer Science College Diploma}{2008 -- 2011}
   \resumeSubHeadingListEnd
-
-
-%--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
-  \resumeSubHeadingListStart
-    \item{
-      \textbf{Languages}{: C\#, Javascript, SQL, Typescript, HTML, CSS}
-      \hfill
-      \textbf{Technologies}{: AngularJS, ASP.NET MVC, git, Unity, Jenkins}
-   }
-\resumeSubHeadingListEnd
-
 
 \textit{Languages: Fluent in French and English}
 

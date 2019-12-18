@@ -10,8 +10,10 @@
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{comment}
 
-
+\definecolor{main}{HTML}{002366}
 
 
 \pagestyle{fancy}
@@ -39,8 +41,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-4pt}\scshape\raggedright\large\color{main}
+}{}{0em}{}[\color{main}\titlerule \vspace{-5pt}]
 
 
 %-------------------------
@@ -54,16 +56,16 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{0.96\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       #3 & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-10pt}
 }
 
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 \newcommand{\resumeSubSubHeading}[1]{
-    \vspace{2pt}
+
     \textit{\small #1}
     \vspace{-6pt}
 }
@@ -72,7 +74,7 @@
 \renewcommand{\labelitemii}{$\circ$}
 
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=2em, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -82,18 +84,17 @@
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-
 \begin{document}
-
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Maxime P\'eloquin} & \href{mailto:maxime.peloquin@gmail.com}{maxime.peloquin@gmail.com}\\
-  & 514-358-2342 \\
+  \textbf{\Huge\vspace{-20pt}\color{main} Maxime P\'eloquin} \\
+
+    & \href{mailto:maxime.peloquin@gmail.com}{maxime.peloquin@gmail.com} \\
+    & 514-358-2342 \\
+    
   \vspace{-20pt}
 \end{tabular*}
-
 
 %-----------EXPERIENCE-----------------
 \section{Exp\'erience}
@@ -112,7 +113,7 @@
     \resumeSubheading
       {Rideau, Inc.}{}
       {D\'eveloppeur de logiciels II}{Sep 2016 - May 2018}
-      
+
         \resumeSubSubHeading{En tant que chef d'\'equipe pour un produit prim\'e dans l'industrie des ressources humaines}
         \resumeItemListStart
             \resumeItem{}
@@ -143,12 +144,12 @@
               {Assurer que toutes les pages de l'application soient r\'eactives et fournissent une bonne exp\'erience sur les navigateurs mobiles.}
         \resumeItemListEnd
         
-      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \begin{tabular*}{0.96\textwidth}{l@{\extracolsep{\fill}}r}
       D\'eveloppeur de logiciels & \textit{\small Mai 2015 - Sep 2016} \\
       \end{tabular*}\vspace{-5pt}
       \resumeItemListStart
         \resumeItem{}
-          {Participer au d\'eveloppement d'une application ASP.NET MVC qui offre des cours en ligne aux gestionnaires des clients, ainsi qu'un moyen pour le client de suivre les progr\`es de leurs gestionnaires.}
+          {Participer au d\'eveloppement d'une application web en ASP.NET MVC.}
         \resumeItem{}
           {Introduire des tests automatis\'es \`a l'application.}
       \resumeItemListEnd
@@ -161,14 +162,13 @@
           {Contribuer au d\'eveloppement d'une SPA en utilisant AngularJS, coffeescript et un Api RESTFul avec C\#, en utilisant le TDD \`a tous les niveaux.}
         \resumeItem{}{Participer \`a une \'equipe agile guid\'ee par des entra\^ineurs de Scrum.org.}
       \resumeItemListEnd
-      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \begin{tabular*}{0.96\textwidth}{l@{\extracolsep{\fill}}r}
       D\'eveloppeur de logiciels & \textit{\small \'Et\'e 2012} \\
       \end{tabular*}\vspace{-5pt}
       \resumeItemListStart
         \resumeItem{}
           {D\'evelopper plusieurs applications internes \`a l'aide de VB.NET.}
       \resumeItemListEnd
-
 
       
     \resumeSubheading
@@ -180,7 +180,6 @@
         \resumeItem{}{Cr\'eer un plugin MediaWiki personnalis\'e en PHP et javascript pour afficher les r\'esultats de performance des compilateurs et les comparer \`a d'autres compilateurs populaires.}
       \resumeItemListEnd
 
-
     \resumeSubheading
       {Solution 3 minds}{}
       {Stagiaire}{Jan 2011 - Mai 2011}
@@ -189,8 +188,6 @@
           {D\'evelopper une application web en PHP pour aider \`a am\'eliorer le r\'ef\'erencement des sites web (SEO) en les analysant, en proposant des changements de mots-cl\'es en utilisant l'API Google Adwords ainsi qu'en proposant des suggestions d'am\'elioration de structure.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
-
-
 
 
 %-----------EDUCATION-----------------
@@ -205,21 +202,7 @@
   \resumeSubHeadingListEnd
 
 
-%--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
-  \resumeSubHeadingListStart
-    \item{
-      \textbf{Langages}{: C\#, Javascript, SQL, Typescript, HTML, CSS}
-    }
-    \item{
-      \textbf{Technologies}{: AngularJS, ASP.NET MVC, git, Unity, Jenkins}
-    }
-\resumeSubHeadingListEnd
-
-
 \textit{Langues: Parle couramment le fran\c{c}ais et l'anglais}
-
 
 %-------------------------------------------
 \end{document}
-
